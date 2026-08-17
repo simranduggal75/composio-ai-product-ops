@@ -266,13 +266,13 @@ def main():
                 )
 
             print(
-                f"  ✓ Saved {app['name']}"
+                f"  OK - Saved {app['name']}"
             )
 
         except Exception as exc:
 
             print(
-                f"  ✗ FAILED: {exc}"
+                f"  FAILED: {exc}"
             )
 
             results.append({

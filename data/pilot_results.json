@@ -52,5 +52,397 @@
         "source_type": "official_docs"
       }
     ]
+  },
+  {
+    "id": 2,
+    "app": "HubSpot",
+    "category": "CRM and Sales",
+    "research_status": "complete",
+    "description": "HubSpot is a CRM and marketing/sales/service platform that provides a broad REST API and an app marketplace.",
+    "authentication_methods": [
+      "OAuth2",
+      "Bearer token",
+      "Service Keys"
+    ],
+    "credential_status": "self_serve_free",
+    "api_types": [
+      "REST"
+    ],
+    "api_breadth": "broad",
+    "mcp_status": "official",
+    "buildability": "buildable_today",
+    "main_blocker": null,
+    "composio_toolkit_exists": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "claim": "HubSpot provides a remote MCP server at mcp.hubspot.com for interacting with CRM data.",
+        "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "Service Keys are account-level API credentials for system-to-system, data-only integrations.",
+        "url": "https://developers.hubspot.com/blog/hubspot-service-keys-the-right-api-credential-for-data-integrations",
+        "source_type": "official_blog"
+      },
+      {
+        "claim": "OAuth is required for apps intended for multiple accounts or the HubSpot Marketplace.",
+        "url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/working-with-oauth",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "The HubSpot MCP server enables AI assistants to interact with CRM data through natural conversation.",
+        "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server",
+        "source_type": "official_docs"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "app": "Pipedrive",
+    "category": "CRM and Sales",
+    "research_status": "complete",
+    "description": "Pipedrive is a sales-pipeline-focused CRM designed for small and mid-market sales teams.",
+    "authentication_methods": [
+      "OAuth2",
+      "API key"
+    ],
+    "credential_status": "self_serve_free",
+    "api_types": [
+      "REST"
+    ],
+    "api_breadth": "broad",
+    "mcp_status": "official",
+    "buildability": "buildable_today",
+    "main_blocker": null,
+    "composio_toolkit_exists": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "claim": "Pipedrive offers a RESTful API that uses JSON format and is validated against an API token.",
+        "url": "https://developers.pipedrive.com/docs/api/v1",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "OAuth 2.0 is required for developing apps available in the Pipedrive Marketplace.",
+        "url": "https://developers.pipedrive.com/docs/api/v1/Oauth",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "Pipedrive launched a native official MCP server.",
+        "url": "https://www.pipedrive.com/en/newsroom/pipedrive-launches-native-mcp-server-bringing-crm-workflows-directly-into-ai-assistants",
+        "source_type": "official_blog"
+      },
+      {
+        "claim": "The API covers deals, persons, organizations, activities, notes, pipelines, products, leads, files, users, custom fields, and webhooks.",
+        "url": "https://developers.pipedrive.com/docs/api/v1",
+        "source_type": "official_docs"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "app": "Attio",
+    "category": "CRM and Sales",
+    "research_status": "complete",
+    "description": "A highly customizable CRM platform built around a flexible data model for revenue teams.",
+    "authentication_methods": [
+      "OAuth2",
+      "API key"
+    ],
+    "credential_status": "self_serve_free",
+    "api_types": [
+      "REST (JSON over HTTPS)"
+    ],
+    "api_breadth": "broad",
+    "mcp_status": "official",
+    "buildability": "buildable today",
+    "main_blocker": null,
+    "composio_toolkit_exists": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "claim": "Attio provides a public REST API which exchanges JSON over HTTPS.",
+        "url": "https://docs.attio.com/rest-api/overview",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "Attio implements the standard OAuth 2.0 specification.",
+        "url": "https://docs.attio.com/rest-api/guides/authentication",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "You can manually generate an API key in the developer settings page of your apps.",
+        "url": "https://docs.attio.com/rest-api/guides/authentication",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "Expose Attio to AI clients using the MCP server.",
+        "url": "https://attio.com/platform/developers",
+        "source_type": "official_docs"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "app": "Twenty",
+    "category": "CRM and Sales",
+    "research_status": "complete",
+    "description": "An open-source CRM that is self-hostable or available in the cloud, featuring an auto-generated REST and GraphQL API based on the workspace data model.",
+    "authentication_methods": [
+      "API key",
+      "Token",
+      "OAuth 2.0"
+    ],
+    "credential_status": "self_serve_free",
+    "api_types": [
+      "REST",
+      "GraphQL"
+    ],
+    "api_breadth": "broad",
+    "mcp_status": "community",
+    "buildability": "buildable today",
+    "main_blocker": null,
+    "composio_toolkit_exists": false,
+    "confidence": "high",
+    "evidence": [
+      {
+        "claim": "REST and GraphQL APIs are generated from the workspace schema.",
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "API key can be generated instantly from Settings > API & Webhooks.",
+        "url": "https://docs.twenty.com/developers/extend/api",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "Supports OAuth 2.0 with authorization code + PKCE and client credentials.",
+        "url": "https://docs.twenty.com/developers/extend/oauth",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "Community MCP servers exist (mhenry3164, igorwarzocha, jezweb).",
+        "url": "https://github.com/mhenry3164/twenty-crm-mcp-server",
+        "source_type": "third_party"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "app": "Podio",
+    "category": "CRM and Sales",
+    "research_status": "complete",
+    "description": "A flexible, app-based work and CRM platform that allows users to manage custom app data, contacts, and tasks.",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "credential_status": "self_serve_free",
+    "api_types": [
+      "REST"
+    ],
+    "api_breadth": "moderate",
+    "mcp_status": "community",
+    "buildability": "buildable_with_friction",
+    "main_blocker": "Low default rate limit (250 req/hr per client_id) constrains agent workloads.",
+    "composio_toolkit_exists": false,
+    "confidence": "high",
+    "evidence": [
+      {
+        "claim": "The Podio API uses the OAuth2 protocol for authentication.",
+        "url": "https://developers.podio.com/authentication",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "Rate limit is 250 authenticated requests/hour per client_id.",
+        "url": "https://developers.podio.com/index/limits",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "An MCP server exists that gives AI agents access to the Podio API.",
+        "url": "https://github.com/stoskov/podio-mcp",
+        "source_type": "official_github"
+      },
+      {
+        "claim": "ProcFu enhances Podio's capabilities by providing a suite of automation tools.",
+        "url": "https://docs.composio.dev/toolkits/procfu",
+        "source_type": "composio"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "app": "Zoho CRM",
+    "category": "CRM and Sales",
+    "research_status": "complete",
+    "description": "Zoho CRM is a mature CRM platform within the Zoho suite that provides extensive REST, Bulk, and COQL APIs for managing sales and customer data.",
+    "authentication_methods": [
+      "OAuth 2.0"
+    ],
+    "credential_status": "self_serve_free",
+    "api_types": [
+      "REST (v8)",
+      "Bulk API",
+      "COQL query language",
+      "Notification API"
+    ],
+    "api_breadth": "broad",
+    "mcp_status": "official",
+    "buildability": "buildable_today",
+    "main_blocker": null,
+    "composio_toolkit_exists": true,
+    "confidence": "high",
+    "evidence": [
+      {
+        "claim": "Zoho CRM uses the OAuth 2.0 protocol for authentication.",
+        "url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "Zoho CRM provides pre-built MCP servers for Data Insights, Data Operations, Module Customization, and Workflow & Process Automation.",
+        "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "Any Zoho CRM account (including permanent free plan, up to 3 users) has API access with 5,000 API credits/day.",
+        "url": "https://aiproductivity.ai/guides/zoho-crm-api-developer-guide/",
+        "source_type": "third_party"
+      },
+      {
+        "claim": "Zoho CRM provides OpenAPI Specification (OAS) files for version 8.0.",
+        "url": "https://github.com/zoho/crm-oas",
+        "source_type": "official_github"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "app": "Close",
+    "category": "CRM and Sales",
+    "research_status": "complete",
+    "description": "Inside-sales-focused CRM with built-in calling and email, featuring a REST API designed for scripts and integrations.",
+    "authentication_methods": [
+      "OAuth2",
+      "API key"
+    ],
+    "credential_status": "self_serve_trial",
+    "api_types": [
+      "REST"
+    ],
+    "api_breadth": "broad",
+    "mcp_status": "official",
+    "buildability": "easy_win",
+    "main_blocker": null,
+    "composio_toolkit_exists": false,
+    "confidence": "high",
+    "evidence": [
+      {
+        "claim": "Close uses industry-standard REST conventions with predictable URL structures, standard HTTP methods, and JSON request/response bodies.",
+        "url": "https://developer.close.com/api/overview",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "Two methods are supported: API Keys and OAuth 2.0.",
+        "url": "https://developer.close.com/api/overview",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "Close's MCP server is officially supported across the Claude ecosystem.",
+        "url": "https://developer.close.com/mcp",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "API keys can be created in Settings -> Developer -> API Keys.",
+        "url": "https://developer.close.com/integrations",
+        "source_type": "official_docs"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "app": "Copper",
+    "category": "CRM and Sales",
+    "research_status": "complete",
+    "description": "Copper is a Google-Workspace-native CRM designed for relationship-driven sales teams.",
+    "authentication_methods": [
+      "OAuth2",
+      "API key"
+    ],
+    "credential_status": "self_serve_free",
+    "api_types": [
+      "REST (JSON)"
+    ],
+    "api_breadth": "moderate",
+    "mcp_status": "community",
+    "buildability": "buildable_today",
+    "main_blocker": null,
+    "composio_toolkit_exists": false,
+    "confidence": "high",
+    "evidence": [
+      {
+        "claim": "Copper offers OAuth2.0 and API Keys for authentication.",
+        "url": "https://developer.copper.com/introduction/authentication.html",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "API keys can be generated in System settings > API Keys.",
+        "url": "https://developer.copper.com/introduction/authentication.html",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "The API covers Leads, People, Companies, Opportunities, activities, and custom fields.",
+        "url": "https://developer.copper.com/introduction/authentication.html",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "No official Composio toolkit exists for Copper.",
+        "url": "https://docs.composio.dev/toolkits",
+        "source_type": "composio"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "app": "DealCloud",
+    "category": "CRM and Sales",
+    "research_status": "complete",
+    "description": "DealCloud is a vertical CRM and deal-management platform designed for private equity, investment banking, and capital markets firms.",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "credential_status": "admin_gated",
+    "api_types": [
+      "REST",
+      "GraphQL"
+    ],
+    "api_breadth": "moderate",
+    "mcp_status": "official",
+    "buildability": "blocked",
+    "main_blocker": "Requires being an existing paying DealCloud client with admin-provisioned API access; no self-serve trial/sandbox account discoverable.",
+    "composio_toolkit_exists": false,
+    "confidence": "high",
+    "evidence": [
+      {
+        "claim": "To enable API access, ensure the intended user is assigned to a user group with the appropriate permissions and enable 'API' in Site Areas.",
+        "url": "https://api.docs.dealcloud.com/docs/apikeys",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "DealCloud MCP Server — client preview starting July 2026",
+        "url": "https://api.docs.dealcloud.com/docs",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "DealCloud MCP uses OAuth to authenticate, letting AI assistants connect on behalf of an individual user.",
+        "url": "https://api.docs.dealcloud.com/mcp/authentication",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "The Data APIs are used to manipulate records in the site.",
+        "url": "https://dealcloud.hexdocs.pm/api-reference.html",
+        "source_type": "official_docs"
+      }
+    ]
   }
 ]
