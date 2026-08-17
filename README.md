@@ -1,6 +1,6 @@
 # Composio AI Product Ops — Take-Home
 
-**Live case study:** https://claude.ai/code/artifact/a1d15606-af7e-41fa-ae59-4a130987d731
+**Live case study:** https://simranduggal75.github.io/composio-ai-product-ops/
 
 One page, self-explanatory: headline patterns up top, a filterable/sortable matrix of all 100 apps, how the research agent works, and an honest verification section (what was checked by hand, what it caught, before/after accuracy).
 
