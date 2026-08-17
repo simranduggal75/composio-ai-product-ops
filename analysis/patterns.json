@@ -1,0 +1,328 @@
+{
+  "generatedAt": "2026-08-17T14:38:59.196Z",
+  "totalApps": 100,
+  "authCount": {
+    "OAuth2": 15,
+    "OAuth2 + Token": 17,
+    "OAuth2 + API key": 7,
+    "API key + Token": 1,
+    "OAuth2 + Basic + API key": 1,
+    "OAuth2 + API key + Basic": 2,
+    "Basic + API key + OAuth2": 1,
+    "Token + OAuth2": 5,
+    "API key + Token + OAuth2": 2,
+    "Token + Other": 1,
+    "API key + Basic + OAuth2": 1,
+    "Token + Basic + OAuth2": 1,
+    "Basic + API key": 1,
+    "OAuth2 + Other": 6,
+    "API key": 11,
+    "Token": 5,
+    "OAuth2 + Basic": 1,
+    "Basic + Other": 1,
+    "API key + OAuth2": 6,
+    "API key + Basic": 1,
+    "Other + Token": 1,
+    "Other": 4,
+    "Basic": 1,
+    "Token + Basic": 1,
+    "API key + Other": 3,
+    "OAuth2 + Token + Other": 1,
+    "API key + OAuth2 + Token": 1,
+    "OAuth2 + Basic + Token": 1,
+    "N/A - local CLI": 1
+  },
+  "selfServeCount": {
+    "self-serve": 67,
+    "gated": 19,
+    "mixed": 14
+  },
+  "verdictCount": {
+    "buildable today": 67,
+    "partial": 23,
+    "blocked": 10
+  },
+  "mcpCount": {
+    "yes-official": 48,
+    "yes-community": 26,
+    "no": 26
+  },
+  "byCategory": {
+    "CRM and Sales": {
+      "self": 9,
+      "gated": 1,
+      "mixed": 0,
+      "total": 10,
+      "buildable": 8,
+      "partial": 1,
+      "blocked": 1
+    },
+    "Support and Helpdesk": {
+      "self": 7,
+      "gated": 2,
+      "mixed": 1,
+      "total": 10,
+      "buildable": 7,
+      "partial": 2,
+      "blocked": 1
+    },
+    "Communications and Messaging": {
+      "self": 8,
+      "gated": 1,
+      "mixed": 1,
+      "total": 10,
+      "buildable": 8,
+      "partial": 2,
+      "blocked": 0
+    },
+    "Marketing, Ads, Email and Social": {
+      "self": 5,
+      "gated": 5,
+      "mixed": 0,
+      "total": 10,
+      "buildable": 4,
+      "partial": 6,
+      "blocked": 0
+    },
+    "Ecommerce": {
+      "self": 5,
+      "gated": 3,
+      "mixed": 2,
+      "total": 10,
+      "buildable": 6,
+      "partial": 2,
+      "blocked": 2
+    },
+    "Data, SEO and Scraping": {
+      "self": 6,
+      "gated": 1,
+      "mixed": 3,
+      "total": 10,
+      "buildable": 5,
+      "partial": 4,
+      "blocked": 1
+    },
+    "Developer, Infra and Data platforms": {
+      "self": 10,
+      "gated": 0,
+      "mixed": 0,
+      "total": 10,
+      "buildable": 9,
+      "partial": 1,
+      "blocked": 0
+    },
+    "Productivity and Project Management": {
+      "self": 8,
+      "gated": 0,
+      "mixed": 2,
+      "total": 10,
+      "buildable": 10,
+      "partial": 0,
+      "blocked": 0
+    },
+    "Finance and Fintech": {
+      "self": 4,
+      "gated": 2,
+      "mixed": 4,
+      "total": 10,
+      "buildable": 5,
+      "partial": 3,
+      "blocked": 2
+    },
+    "AI, Research and Media-native": {
+      "self": 5,
+      "gated": 4,
+      "mixed": 1,
+      "total": 10,
+      "buildable": 5,
+      "partial": 2,
+      "blocked": 3
+    }
+  },
+  "blockedApps": [
+    {
+      "name": "DealCloud",
+      "category": "CRM and Sales",
+      "blocker": "Requires being an existing paying DealCloud client with admin-provisioned API access; no self-serve trial/sandbox account discoverable, no MCP server (official or community) found."
+    },
+    {
+      "name": "Gladly",
+      "category": "Support and Helpdesk",
+      "blocker": "No public self-serve trial/signup (enterprise sales-led, ~$20-30k/yr contracts); API token creation additionally requires admin-provisioned account role; no MCP server found (official or community)."
+    },
+    {
+      "name": "Salesforce Commerce Cloud",
+      "category": "Ecommerce",
+      "blocker": "Requires an existing paid Commerce Cloud license/customer relationship (or ISV partner status) plus purchased sandbox credits to get API credentials — no public self-serve signup."
+    },
+    {
+      "name": "fanbasis",
+      "category": "Ecommerce",
+      "blocker": "Could not access real endpoint/auth documentation: the main docs portal requires a login password, and the company/domain appears to be mid-rebrand from FanBasis to Commas, muddying which docs are current and public."
+    },
+    {
+      "name": "Clay",
+      "category": "Data, SEO and Scraping",
+      "blocker": "No general-purpose public API for an AI agent to call into Clay (create/read/update tables, trigger enrichments programmatically) was found — only inbound webhooks and workspace API keys scoped to specific in-platform actions; no official or community MCP server surfaced."
+    },
+    {
+      "name": "Paygent Connect",
+      "category": "Finance and Fintech",
+      "blocker": "No discoverable public documentation, developer portal, or API reference for 'Paygent Connect' under that name — cannot confirm auth model, endpoints, or self-serve access."
+    },
+    {
+      "name": "PitchBook",
+      "category": "Finance and Fintech",
+      "blocker": "No self-serve signup or public API reference; requires an existing paid PitchBook subscription plus a separate enterprise API contract and manual provisioning by PitchBook's Direct Data team."
+    },
+    {
+      "name": "NotebookLM",
+      "category": "AI, Research and Media-native",
+      "blocker": "No self-serve API for consumer NotebookLM; the only documented API (Gemini Notebook Enterprise) requires a Google Cloud Enterprise agreement and is still Pre-GA/Preview."
+    },
+    {
+      "name": "Otter AI",
+      "category": "AI, Research and Media-native",
+      "blocker": "Public API and official MCP server require an Enterprise plan plus manual account-manager enablement; no free/self-serve API key path."
+    },
+    {
+      "name": "Consensus",
+      "category": "AI, Research and Media-native",
+      "blocker": "No public self-serve API key; both the REST API and the MCP server require being an existing paid/Enterprise Consensus customer."
+    }
+  ],
+  "partialApps": [
+    {
+      "name": "Podio",
+      "category": "CRM and Sales",
+      "blocker": "Low default rate limit (250 req/hr per client_id) constrains agent workloads; no MCP server found (official or community)."
+    },
+    {
+      "name": "Zendesk",
+      "category": "Support and Helpdesk",
+      "blocker": "No official MCP server yet (announced, not shipped); community MCP servers exist as a workaround."
+    },
+    {
+      "name": "Freshdesk",
+      "category": "Support and Helpdesk",
+      "blocker": "Official MCP integration is Beta/EAP and reportedly restricted to Enterprise-plan customers; direct REST API itself is fully buildable today."
+    },
+    {
+      "name": "WhatsApp Business",
+      "category": "Communications and Messaging",
+      "blocker": "Real production sending (beyond the sandbox test number/24h session window) requires Meta Business verification and, for marketing messages, template approval."
+    },
+    {
+      "name": "Aircall",
+      "category": "Communications and Messaging",
+      "blocker": "API/OAuth credential access is gated behind a paid Professional-tier-or-higher plan and, for OAuth apps, a manual request to Aircall for client credentials — not a free/instant self-serve signup."
+    },
+    {
+      "name": "Google Ads",
+      "category": "Marketing, Ads, Email and Social",
+      "blocker": "Developer token defaults to test-account-only access; production-account use requires a manual Google review/approval process before real campaigns can be managed."
+    },
+    {
+      "name": "Meta Ads",
+      "category": "Marketing, Ads, Email and Social",
+      "blocker": "Sensitive/advanced permissions require Meta App Review and business verification before an agent can act on a live ad account beyond low-volume/dev-mode limits."
+    },
+    {
+      "name": "LinkedIn Ads",
+      "category": "Marketing, Ads, Email and Social",
+      "blocker": "Full production access gated behind LinkedIn's manual application review (up to 30 business days) tied to a specific declared use case."
+    },
+    {
+      "name": "systeme.io",
+      "category": "Marketing, Ads, Email and Social",
+      "blocker": "API surface is documented narrowly (mainly contacts/tags); full funnel/course/product management coverage is unclear from public docs, limiting what an agent could reliably automate beyond contact/CRM operations."
+    },
+    {
+      "name": "Pinterest",
+      "category": "Marketing, Ads, Email and Social",
+      "blocker": "Trial-tier access (the easy, fast-approval tier) only produces sandboxed content invisible to real users; genuine production use requires a second manual Standard-access review with a video demo."
+    },
+    {
+      "name": "Threads",
+      "category": "Marketing, Ads, Email and Social",
+      "blocker": "Production/public use requires Meta Tech Provider Verification and App Review for sensitive scopes; no Composio toolkit currently exists (confirmed absent from Composio's Social Media and Advertising & Marketing category listings) and no MCP server was found."
+    },
+    {
+      "name": "Magento (Adobe Commerce)",
+      "category": "Ecommerce",
+      "blocker": "Requires either self-hosting the free Magento Open Source edition yourself (no shared vendor sandbox) or a paid Adobe Commerce license for the managed/cloud edition."
+    },
+    {
+      "name": "Amazon Selling Partner API",
+      "category": "Ecommerce",
+      "blocker": "Requires an approved Professional Seller Central account plus Amazon's Developer Profile review (and marketplace listing for public apps) before real API credentials are issued — not a same-day self-serve signup."
+    },
+    {
+      "name": "Ahrefs",
+      "category": "Data, SEO and Scraping",
+      "blocker": "Requires a paid Ahrefs subscription (Lite $129/mo+) to obtain an API key; no free-tier credentials for a developer to self-serve test with beyond the limited public Domain Rating endpoint."
+    },
+    {
+      "name": "MrScraper",
+      "category": "Data, SEO and Scraping",
+      "blocker": "Could not confirm free/self-serve trial credentials or full API reference from public docs in the time budgeted; docs.mrscraper.com content is thin/fragmented across proxy vs. scraper products."
+    },
+    {
+      "name": "Sherlock",
+      "category": "Data, SEO and Scraping",
+      "blocker": "No hosted API/service exists at all — any agent integration requires wrapping the local CLI (subprocess execution) rather than calling an endpoint, and there's no official MCP server, only community wrappers."
+    },
+    {
+      "name": "Waterfall.io",
+      "category": "Data, SEO and Scraping",
+      "blocker": "Could not verify signup/trial mechanics or pricing gate from public docs within budget — real documentation exists (docs.waterfall.io) but is thin on go-to-market details, and no MCP or Composio presence was found."
+    },
+    {
+      "name": "Neo4j",
+      "category": "Developer, Infra and Data platforms",
+      "blocker": "Aura management API requires billing info on file before API credentials can be issued on Free/Professional tiers; data-plane access is Cypher-over-Bolt rather than a conventional REST resource surface, so 'API surface' is narrow relative to other apps here."
+    },
+    {
+      "name": "Plaid",
+      "category": "Finance and Fintech",
+      "blocker": "Sandbox is instantly self-serve, but real (production) bank-linked data requires Plaid's application/compliance approval process, and no official or community MCP server was found."
+    },
+    {
+      "name": "Binance",
+      "category": "Finance and Fintech",
+      "blocker": "No official/community MCP server found; Composio has no dedicated Binance toolkit (only adjacent crypto tools like CoinMarketCap/Bitquery under its 'Crypto-Kit'), and full trading functionality requires KYC-gated account access."
+    },
+    {
+      "name": "iPayX",
+      "category": "Finance and Fintech",
+      "blocker": "Vendor claims an official MCP server and REST API/SDKs directly on its marketing site, but the specific docs URL (ipayx.ai/docs) returned a 404, so the actual API reference could not be independently verified beyond the homepage's self-description."
+    },
+    {
+      "name": "Devin",
+      "category": "AI, Research and Media-native",
+      "blocker": "Requires a paid Teams ($500/mo) or Enterprise Devin plan to obtain an API key; not accessible on the free/individual Core tier."
+    },
+    {
+      "name": "Grain",
+      "category": "AI, Research and Media-native",
+      "blocker": "Requires being an existing Grain (paying customer/workspace member) account holder to issue a Personal or Workspace Access Token; no free/anonymous developer sandbox found."
+    }
+  ],
+  "blockerThemes": {
+    "MCP not yet shipped": 10,
+    "no public API / undiscoverable docs": 2,
+    "sales/partner-gated": 8,
+    "admin approval required": 5,
+    "paid-plan gated": 4,
+    "other": 7
+  },
+  "headline": {
+    "anyOAuthPct": 68,
+    "anyApiKeyPct": 38,
+    "selfServePct": 67,
+    "buildableTodayPct": 67,
+    "officialMcpPct": 48,
+    "anyMcpPct": 74,
+    "composioExistingCount": 56
+  }
+}

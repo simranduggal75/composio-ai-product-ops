@@ -1,0 +1,18 @@
+{
+  "method": "10 parallel research agents (one per category) produced a first-pass dataset of all 100 apps via live WebSearch/WebFetch against vendor docs, each app tagged with a confidence level. A human/orchestrator verification pass then independently re-searched a cross-category sample of the highest-leverage claims (official MCP server existence, self-serve access, primary auth method) using fresh WebSearch queries run in the same session, and corrected the dataset where the two passes disagreed.",
+  "sample_size": 8,
+  "sample": ["Stripe", "GitHub", "Slack", "Shopify", "Zendesk", "DataForSEO", "Cloudflare", "QuickBooks"],
+  "checks": [
+    {"app": "Stripe", "claim_checked": "official MCP server + auth model", "first_pass": "yes-official MCP, API key + OAuth2", "verified": "match", "note": "mcp.stripe.com confirmed official, OAuth or restricted API key."},
+    {"app": "GitHub", "claim_checked": "official MCP server", "first_pass": "yes-official MCP", "verified": "match", "note": "github/github-mcp-server confirmed official, hosted + local options."},
+    {"app": "Slack", "claim_checked": "MCP server status", "first_pass": "yes-community only", "verified": "MISS - corrected", "note": "Slack shipped an official MCP server (GA Feb 17 2026, docs.slack.dev/changelog/2026/02/17/slack-mcp). First pass missed the official launch and reported community-only."},
+    {"app": "Shopify", "claim_checked": "self-serve dev access", "first_pass": "self-serve via dev stores/custom apps", "verified": "match", "note": "shopify.dev confirms free dev stores + custom app API access, no paid plan required."},
+    {"app": "Zendesk", "claim_checked": "MCP server status", "first_pass": "yes-official MCP", "verified": "MISS - corrected", "note": "Official MCP *server* (Zendesk data out to agents) is announced for summer 2026 but not live as of Aug 2026 - only a separate 'MCP client' feature (agents in to Zendesk) has shipped. First pass conflated the two launches. Verdict downgraded from 'buildable today' to 'partial'."},
+    {"app": "DataForSEO", "claim_checked": "self-serve + auth + MCP", "first_pass": "self-serve, Basic auth, official MCP", "verified": "match", "note": "$1 free trial no CC required, official hosted MCP at mcp.dataforseo.com confirmed."},
+    {"app": "Cloudflare", "claim_checked": "self-serve + official MCP", "first_pass": "self-serve, official MCP, OAuth2", "verified": "match", "note": "mcp.cloudflare.com confirmed official, OAuth 2.1, self-serve API tokens also available."},
+    {"app": "QuickBooks", "claim_checked": "self-serve OAuth2 signup", "first_pass": "self-serve, OAuth2", "verified": "match", "note": "Intuit Developer Portal signup confirmed self-serve, auto-enrolled Builder Tier, sandbox + OAuth playground available."}
+  ],
+  "first_pass_accuracy": "6/8 (75%) fully correct on the specific claim checked",
+  "post_verification_accuracy": "8/8 (100%) after correcting Slack and Zendesk MCP-status errors",
+  "honest_caveat": "This is an 8-app spot-check, not a full 100-app hand audit - time-boxed given the assignment's own budget guidance. The two real errors caught (both MCP-status claims going stale within the same year they were researched) point to the single biggest fragility in this kind of dataset: MCP server availability is changing faster than any snapshot can track, so buildability verdicts tied to MCP existence should be treated as time-stamped, not permanent."
+}

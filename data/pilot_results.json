@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "app": "Salesforce",
+    "category": "CRM and Sales",
+    "research_status": "complete",
+    "description": "Salesforce is a CRM and sales platform that provides various APIs and authentication frameworks for integrating with external systems.",
+    "authentication_methods": [
+      "OAuth 2.0",
+      "JWT Bearer",
+      "Client Credentials",
+      "Web Server (Authorization Code)",
+      "PKCE",
+      "User-Agent (Implicit)",
+      "Username-Password",
+      "API Keys",
+      "AWS Signature Version 4",
+      "Basic Authentication"
+    ],
+    "credential_status": "admin_gated",
+    "api_types": [
+      "REST",
+      "SOAP",
+      "Bulk",
+      "Composite"
+    ],
+    "api_breadth": "broad",
+    "mcp_status": "official",
+    "buildability": "buildable_with_friction",
+    "main_blocker": null,
+    "composio_toolkit_exists": false,
+    "confidence": "high",
+    "evidence": [
+      {
+        "claim": "Salesforce supports six active OAuth 2.0 flows including JWT Bearer, Client Credentials, Web Server, PKCE, and User-Agent.",
+        "url": "https://knowledgelib.io/business/erp-integration/salesforce-oauth-authentication/2026",
+        "source_type": "third_party"
+      },
+      {
+        "claim": "OAuth 2.0 requires configuration in the user interface and other locations.",
+        "url": "https://developer.salesforce.com/docs/atlas.en-us.api_streaming.meta/api_streaming/code_sample_auth_oauth.htm",
+        "source_type": "official_docs"
+      },
+      {
+        "claim": "Salesforce provides Named Credentials and External Credentials to manage authentication and endpoints securely.",
+        "url": "https://success-craft.com/blog/salesforce-named-credentials/",
+        "source_type": "third_party"
+      },
+      {
+        "claim": "Users can build and deploy an OAuth-secured MCP server on MuleSoft CloudHub to empower Agentforce agents.",
+        "url": "https://developer.salesforce.com/",
+        "source_type": "official_docs"
+      }
+    ]
+  }
+]

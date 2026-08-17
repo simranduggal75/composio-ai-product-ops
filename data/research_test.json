@@ -1,0 +1,68 @@
+{
+  "id": 1,
+  "app": "Salesforce",
+  "category": "CRM and Sales",
+  "description": "Salesforce is a cloud-based customer relationship management platform that enables businesses to manage sales, customer service, marketing, and enterprise workflows.",
+  "auth": {
+    "methods": [
+      "oauth2",
+      "bearer_token"
+    ],
+    "evidence": [
+      {
+        "claim": "Salesforce supports OAuth 2.0 authentication flows including JWT bearer token and web server authorization.",
+        "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm",
+        "source_type": "official_docs"
+      }
+    ]
+  },
+  "credential_access": {
+    "status": "self_serve_free",
+    "evidence": [
+      {
+        "claim": "Developers can instantly sign up for a free full-featured Salesforce Developer Edition account to access APIs.",
+        "url": "https://developer.salesforce.com/signup",
+        "source_type": "official_docs"
+      }
+    ]
+  },
+  "api": {
+    "types": [
+      "rest_and_graphql"
+    ],
+    "breadth": "broad",
+    "evidence": [
+      {
+        "claim": "Salesforce offers REST APIs and GraphQL APIs providing full access to standard and custom CRM objects.",
+        "url": "https://developer.salesforce.com/docs/platform/graphql/guide/welcome.html",
+        "source_type": "official_docs"
+      }
+    ]
+  },
+  "mcp": {
+    "status": "community",
+    "evidence": [
+      {
+        "claim": "Community-maintained Model Context Protocol servers exist for Salesforce API integration.",
+        "url": "https://github.com/search?q=salesforce+mcp",
+        "source_type": "third_party"
+      }
+    ]
+  },
+  "buildability": {
+    "verdict": "easy_win",
+    "blocker": null
+  },
+  "composio": {
+    "toolkit_exists": true,
+    "evidence": [
+      {
+        "claim": "Composio features an official toolkit for Salesforce integration with AI agents.",
+        "url": "https://composio.dev",
+        "source_type": "third_party"
+      }
+    ]
+  },
+  "confidence": "high",
+  "research_notes": "Salesforce is ideal for AI agent toolkit integration given its free self-serve developer accounts, extensive REST and GraphQL APIs, standard OAuth 2.0 auth flows, and existing Composio toolkit."
+}
