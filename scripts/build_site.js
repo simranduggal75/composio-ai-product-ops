@@ -394,8 +394,8 @@ footer{padding:44px 0 60px; border-top:1px solid var(--line)}
     </div>
     <div class="col">
       <span class="eyebrow" style="display:block; margin-bottom:6px">Source</span>
-      <a href="#">github.com/&lt;your-username&gt;/composio-ai-product-ops</a>
-      <a href="#">README — how to run the research agent</a>
+      <a href="https://github.com/simranduggal75/composio-ai-product-ops" target="_blank" rel="noopener">github.com/simranduggal75/composio-ai-product-ops</a>
+      <a href="https://github.com/simranduggal75/composio-ai-product-ops#readme" target="_blank" rel="noopener">README — how to run the research agent</a>
     </div>
   </div>
 </footer>
@@ -470,4 +470,6 @@ render();
 `;
 
 fs.writeFileSync(path.join(root, 'site/index.html'), html);
-console.log('Built site/index.html —', apps.length, 'apps,', (html.length/1024).toFixed(0)+'KB');
+fs.mkdirSync(path.join(root, 'docs'), { recursive: true });
+fs.writeFileSync(path.join(root, 'docs/index.html'), html);
+console.log('Built site/index.html and docs/index.html —', apps.length, 'apps,', (html.length/1024).toFixed(0)+'KB');
