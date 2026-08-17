@@ -211,7 +211,7 @@ footer{padding:44px 0 60px; border-top:1px solid var(--line)}
       </nav>
     </div>
     <h1>Most of the internet is buildable&nbsp;today.<br>The blockers cluster in three predictable places.</h1>
-    <p class="lede">100 apps, researched for AI-agent buildability — auth, self-serve access, API surface, and whether an agent could call them today. Built by a 10-way parallel research pipeline, then hand-verified.</p>
+    <p class="lede">100 apps, researched for AI-agent buildability: auth, self-serve access, API surface, and whether an agent could call them today. Built by a 10-way parallel research pipeline, then hand-verified.</p>
     <div class="stat-row">
       <div class="stat"><b>67%</b><span>buildable today, no blocker</span></div>
       <div class="stat"><b>67%</b><span>self-serve dev credentials</span></div>
@@ -224,7 +224,7 @@ footer{padding:44px 0 60px; border-top:1px solid var(--line)}
 <section id="patterns">
   <div class="wrap">
     <div class="section-head">
-      <div><span class="section-num">01 — The Patterns</span><h2>What actually determines buildability</h2></div>
+      <div><span class="section-num">01 · The Patterns</span><h2>What actually determines buildability</h2></div>
     </div>
     <div class="pattern-grid">
       <div class="card">
@@ -337,7 +337,7 @@ footer{padding:44px 0 60px; border-top:1px solid var(--line)}
 <section id="the-hundred">
   <div class="wrap">
     <div class="section-head">
-      <div><span class="section-num">02 — The Findings</span><h2>All 100 apps, one matrix</h2></div>
+      <div><span class="section-num">02 · The Findings</span><h2>All 100 apps, one matrix</h2></div>
     </div>
     <div class="controls">
       <input type="search" id="search" placeholder="Search app name…" aria-label="Search apps">
@@ -373,24 +373,24 @@ footer{padding:44px 0 60px; border-top:1px solid var(--line)}
 <section id="the-agent">
   <div class="wrap">
     <div class="section-head">
-      <div><span class="section-num">03 — The Agent</span><h2>How this dataset actually got made</h2></div>
+      <div><span class="section-num">03 · The Agent</span><h2>How this dataset actually got made</h2></div>
     </div>
     <div class="process">
       <div class="step">
         <span class="step-num">01</span>
-        <div><h3>Fan out — 10 parallel research agents</h3>
-        <p>The 100 apps were split by the assignment's own 10 categories. Each agent got a self-contained brief: a fixed schema (auth, self-serve status, API surface, MCP existence, buildability verdict, evidence URL, confidence), the 10 apps in its category, and a hard rule — no claim without a URL actually seen. Each agent used live web search and page fetches against current vendor docs, then wrote its findings straight to a structured JSON file.</p></div>
+        <div><h3>Fan out: 10 parallel research agents</h3>
+        <p>The 100 apps were split by the assignment's own 10 categories. Each agent got a self-contained brief: a fixed schema (auth, self-serve status, API surface, MCP existence, buildability verdict, evidence URL, confidence), the 10 apps in its category, and a hard rule: no claim without a URL actually seen. Each agent used live web search and page fetches against current vendor docs, then wrote its findings straight to a structured JSON file.</p></div>
       </div>
       <div class="step">
         <span class="step-num">02</span>
         <div><h3>Merge and compute</h3>
-        <p>A small script merges the 10 JSON files into one dataset and computes the category breakdowns, auth distribution, and blocker clustering shown above — mechanically, not by prose summary, so the patterns section can't drift from the underlying data.</p>
+        <p>A small script merges the 10 JSON files into one dataset and computes the category breakdowns, auth distribution, and blocker clustering shown above, mechanically, not by prose summary, so the patterns section can't drift from the underlying data.</p>
         <span class="human-tag">⚠ Human step: two of the ten agent runs failed mid-flight on a session limit; a human noticed the JSON files were missing, re-ran just those two categories, and re-merged.</span>
         </div>
       </div>
       <div class="step">
         <span class="step-num">03</span>
-        <div><h3>Verify — independent re-check against primary sources</h3>
+        <div><h3>Verify: independent re-check against primary sources</h3>
         <p>A separate pass re-searched a cross-category sample of the highest-leverage claims (MCP existence, self-serve status, primary auth) from scratch, independent of the first pass's findings, and diffed the two. See the verification section below for what it caught.</p>
         <span class="human-tag">⚠ Human step: the two disagreements found were corrected by hand directly in the dataset, with the correction and its source logged in the notes field rather than silently overwritten.</span>
         </div>
@@ -398,12 +398,12 @@ footer{padding:44px 0 60px; border-top:1px solid var(--line)}
       <div class="step">
         <span class="step-num">04</span>
         <div><h3>Render</h3>
-        <p>This page is generated from the same <code>data/apps.json</code> file by <code>scripts/build_site.js</code> — the table, the bar charts, and the headline stats are all computed from it at build time, not hand-typed. Re-running the script after any correction regenerates the whole page.</p></div>
+        <p>This page is generated from the same <code>data/apps.json</code> file by <code>scripts/build_site.js</code>: the table, the bar charts, and the headline stats are all computed from it at build time, not hand-typed. Re-running the script after any correction regenerates the whole page.</p></div>
       </div>
     </div>
     <div class="card" style="margin-top:28px">
       <h3>Where Composio's own SDK/MCP fits</h3>
-      <p style="color:var(--ink-soft); font-size:.92rem; max-width:75ch">Composio's SDK/MCP is built for <em>calling</em> an already-integrated app, not for researching whether one is OAuth vs. API-key or self-serve vs. gated — there's no "research this app" endpoint to call. The on-spirit use of it here was as a cross-check signal: for each app, the pipeline also checked whether Composio already lists a toolkit for it (56/100 do) as a second, independent buildability signal alongside the primary research. The natural production version of this pipeline swaps the WebSearch/WebFetch calls for Composio's own MCP-based browsing tools once verified access is available — the schema and verification loop stay identical.</p>
+      <p style="color:var(--ink-soft); font-size:.92rem; max-width:75ch">Composio's SDK/MCP is built for <em>calling</em> an already-integrated app, not for researching whether one is OAuth vs. API-key or self-serve vs. gated; there's no "research this app" endpoint to call. The on-spirit use of it here was as a cross-check signal: for each app, the pipeline also checked whether Composio already lists a toolkit for it (56/100 do) as a second, independent buildability signal alongside the primary research. The natural production version of this pipeline swaps the WebSearch/WebFetch calls for Composio's own MCP-based browsing tools once verified access is available; the schema and verification loop stay identical.</p>
     </div>
   </div>
 </section>
@@ -411,7 +411,7 @@ footer{padding:44px 0 60px; border-top:1px solid var(--line)}
 <section id="verification">
   <div class="wrap">
     <div class="section-head">
-      <div><span class="section-num">04 — The Verification</span><h2>Where the first pass was wrong, shown honestly</h2></div>
+      <div><span class="section-num">04 · The Verification</span><h2>Where the first pass was wrong, shown honestly</h2></div>
     </div>
     <div class="verify-summary">
       <div class="verify-stat before"><b>6/8 (75%) fully correct on the specific claim checked</b><span>first-pass accuracy on the sample checked</span></div>
@@ -487,7 +487,7 @@ footer{padding:44px 0 60px; border-top:1px solid var(--line)}
     <div class="col">
       <span class="eyebrow" style="display:block; margin-bottom:6px">Source</span>
       <a href="https://github.com/simranduggal75/composio-ai-product-ops" target="_blank" rel="noopener">github.com/simranduggal75/composio-ai-product-ops</a>
-      <a href="https://github.com/simranduggal75/composio-ai-product-ops#readme" target="_blank" rel="noopener">README — how to run the research agent</a>
+      <a href="https://github.com/simranduggal75/composio-ai-product-ops#readme" target="_blank" rel="noopener">README: how to run the research agent</a>
     </div>
   </div>
 </footer>
@@ -541,7 +541,7 @@ function render(){
       + '<td style="font-size:.84rem; color:var(--ink-soft)">'+surf+'</td>'
       + '<td><span class="mcp-tag '+mcpClass(a.mcp_exists)+'">'+mcpLabel(a.mcp_exists)+'</span></td>'
       + '<td><span class="chip '+verdictClass(a.buildability_verdict)+'">'+a.buildability_verdict+'</span><span class="conf">'+(a.confidence||'')+' confidence</span></td>'
-      + '<td>'+(ev? '<a class="evidence-link" href="'+ev+'" target="_blank" rel="noopener">source</a>':'—')+'</td>'
+      + '<td>'+(ev? '<a class="evidence-link" href="'+ev+'" target="_blank" rel="noopener">source</a>':'-')+'</td>'
       + '</tr>';
   }).join('');
 }
